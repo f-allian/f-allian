@@ -1,0 +1,26 @@
+name: Languages
+on:
+  schedule:
+    - cron: "0 0 * * 0" 
+  workflow_dispatch:
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+    permissions:
+      contents: write
+    steps:
+      - name: Languages
+        uses: f-allian/metrics@master
+        with:
+          filename: images/metrics.plugin.languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_languages: yes
+          plugin_languages_limit: 5
+          plugin_languages_skipped: f-allian/metrics
+          plugin_languages_threshold: 2%
+          plugin_languages_colors: complementary
+
+      
