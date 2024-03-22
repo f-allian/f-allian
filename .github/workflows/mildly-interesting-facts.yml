@@ -18,6 +18,6 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_habits: yes
-          plugin_habits_from: 200
+          plugin_habits_from: 50
           plugin_habits_facts: yes
           plugin_habits_charts: no
