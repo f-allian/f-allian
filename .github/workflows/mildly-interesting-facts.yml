@@ -14,8 +14,10 @@ jobs:
       - name: Mildly interesting facts
         uses: f-allian/metrics@master
         with:
-          filename: metrics.plugin.habits.facts.svg
+          filename: images/metrics.plugin.habits.facts.svg
+          token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_habits: yes
+          plugin_habits_from: 200
           plugin_habits_facts: yes
           plugin_habits_charts: no
