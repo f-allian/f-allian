@@ -1,0 +1,21 @@
+name: Metrics
+on:
+  schedule:
+    - cron: "0 0 * * 0" 
+  workflow_dispatch:
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+    permissions:
+      contents: write
+    steps:
+      - name: Mildly interesting facts
+        uses: f-allian/metrics@master
+        with:
+          filename: metrics.plugin.habits.facts.svg
+          base: ""
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: no
