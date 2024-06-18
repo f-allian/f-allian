@@ -1,7 +1,7 @@
 name: Mildly Interesting Facts
 on:
   schedule:
-    - cron: "0 0 * * 0" 
+    - cron: "0 0 1 * *" 
   workflow_dispatch:
 jobs:
   github-metrics:
@@ -18,7 +18,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_habits: yes
-          plugin_habits_from: 500
+          plugin_habits_from: 900
           plugin_habits_facts: yes
-          plugin_habits_charts: no  
+          plugin_habits_charts: yes  
           config_timezone: Europe/London
