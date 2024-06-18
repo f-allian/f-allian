@@ -20,5 +20,6 @@ jobs:
           plugin_habits: yes
           plugin_habits_from: 900
           plugin_habits_facts: yes
-          plugin_habits_charts: yes  
+          plugin_habits_charts: yes
+          plugin_habits_days: 30
           config_timezone: Europe/London
